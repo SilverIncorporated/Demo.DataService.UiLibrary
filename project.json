@@ -1,5 +1,5 @@
 {
-  "name": "Demo.Tquilla.DataService.UiLibrary",
+  "name": "Demo.DataService.UiLibrary",
   "description": "UiLibrary for Tquilla Data Service Testing",
   "main": "NewActivity.xaml",
   "dependencies": {
