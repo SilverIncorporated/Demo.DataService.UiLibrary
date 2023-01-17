@@ -12,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.2",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -39,7 +39,8 @@
         "Actions/Initialization/Open Site - Fake Person Generator.xaml",
         "Actions/Person/Generate Person.xaml",
         "Actions/Person/Scrape Person.xaml",
-        "Actions/Person/Click Generate.xaml"
+        "Actions/Person/Click Generate.xaml",
+        "Actions/Initialization/Close Site - Fake Person Generator.xaml"
       ]
     },
     "processOptions": {
