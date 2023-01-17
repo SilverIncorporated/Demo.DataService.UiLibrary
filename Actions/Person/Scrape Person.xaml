@@ -1,0 +1,294 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Scrape_Person" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:Demo_DataService_Entities;assembly=DataService.Demo_DataService_Entities" xmlns:df="clr-namespace:Demo_DataService_Entities.Flows;assembly=Demo.DataService.Entities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Person" Type="OutArgument(d:FPGPerson)" />
+    <x:Property Name="Env" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Scrape_Person.Env>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Scrape_Person.Env>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1406,2931.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>Demo_DataService_Entities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Demo_DataService_Entities.Flows</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>DataService.Demo_DataService_Entities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>Demo.DataService.Entities</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Scrape_Person" sap:VirtualizedContainerService.HintSize="602.6666666666666,2866.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="CityStateZip" />
+      <Variable x:TypeArguments="x:String" Name="Email" />
+      <Variable x:TypeArguments="x:String" Name="Gender" />
+      <Variable x:TypeArguments="x:String" Name="Mobile" />
+      <Variable x:TypeArguments="x:String" Name="Race" />
+      <Variable x:TypeArguments="x:String" Name="Street" />
+      <Variable x:TypeArguments="x:String" Name="Telephone" />
+      <Variable x:TypeArguments="x:String" Name="BirthdayString" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: Random Person/Name Generator | User Identity, Account and Profile Generator" sap:VirtualizedContainerService.HintSize="540.6666666666666,2150" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="462,1839.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/" DesignTimeRectangle="1996, 612, 57, 23" FullSelectorArgument="&lt;webctrl idx='3' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' /&gt;" Guid="877cce98-969f-48a7-9d69-a312e92d06df" InformativeScreenshot="9972e75032b9d5dddec3917cd6ec934f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1935, 609, 770, 30" ElementType="Text" FriendlyName="'Race: White'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='3' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' aaname='Race: ' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Race</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/" DesignTimeRectangle="2024, 657, 93, 23" FullSelectorArgument="&lt;webctrl aaname='(\d+)[/](\d+)[/](\d+).*' matching:aaname='regex' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='(\d+)[/](\d+)[/](\d+).*' matching:aaname='regex' tag='B' type='' class='' /&gt;" Guid="f4ac03dd-6593-4368-aaaa-723cc5e018fe" InformativeScreenshot="78b768a9433345d0415cd921c516b077.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1935, 654, 770, 30" ElementType="Text" FriendlyName="'Birthday: 9/1/1989'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='4' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' aaname='Birthday:  ( years old)' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">BirthdayString</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="2003, 702, 181, 23" FullSelectorArgument="&lt;webctrl idx='6' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' /&gt;" Guid="4939d5f9-3960-41af-b3bb-0327ae1b4ef6" InformativeScreenshot="9e0793f9d09e1442f0814976c53b31e7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1935, 699, 770, 30" ElementType="Text" FriendlyName="'Street: 564'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='5' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' aaname='Street: ' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">Street</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="2083, 747, 294, 23" FullSelectorArgument="&lt;webctrl idx='7' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='B' class='' /&gt;" Guid="ff2073e8-9f60-4aeb-99b3-c199e1d0cab9" InformativeScreenshot="68d05c8331fd987875069ea2c160095e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1935, 744, 770, 30" ElementType="Text" FriendlyName="'City, State,'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='6' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' aaname='City, State, Zip: ' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">CityStateZip</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="2044, 792, 131, 23" FullSelectorArgument="&lt;webctrl idx='7' isleaf='1' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='B' class='' /&gt;" Guid="37f26436-c283-499d-806a-cef0ea081fc5" InformativeScreenshot="69fbfa6f03d1e0a013de6b419e987021.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1935, 789, 770, 30" ElementType="Text" FriendlyName="'Telephone: 913-757-7262'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='7' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' aaname='Telephone: ' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">Telephone</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="2009, 837, 131, 23" FullSelectorArgument="&lt;webctrl idx='8' isleaf='1' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='B' class='' /&gt;" Guid="28e4eae4-04c3-4bc7-969a-e854e406ebe8" InformativeScreenshot="5c369204081ebdee07b009e4ebfc7a03.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1935, 834, 770, 30" ElementType="Text" FriendlyName="'Mobile: 316-880-7380'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' idx='8' tag='P' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='P' aaname='Mobile: ' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">Mobile</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="400,212.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakepersongenerator.com/Index/generate" DesignTimeRectangle="1944, 1415, 808, 51" ElementType="InputBox" FullSelectorArgument="&lt;webctrl class='form-control' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl class='form-control' tag='INPUT' type='text' aaname='' /&gt;" Guid="fd899c40-ae91-4451-b103-b5f5d39b8e54" InformativeScreenshot="7b10bd937b750c64f5c6971d0559da23.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Person/Name Generator | User Identity, Account and Profile Generator' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1570, 1430, 53, 23" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl aaname='Email' tag='SPAN' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aaname='Email' tag='SPAN' type='' class='' check:innerText='Email' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.TextString>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">Email</CSharpReference>
+                </OutArgument>
+              </uix:NGetText.TextString>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="3b9ee752e87877157f7124260c3213da.jpg" Selector="&lt;html title='Random Person/Name Generator | User Identity, Account and Profile Generator' app='chrome.exe' /&gt;" Title="Random Person/Name Generator | User Identity, Account and Profile Generator" Url="https://www.fakepersongenerator.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <df:Create_New_Person DisplayName="Create New Person (Create_New_Person)" Env="Development" sap:VirtualizedContainerService.HintSize="540.6666666666666,566" sap2010:WorkflowViewState.IdRef="Create_New_Person_1">
+      <df:Create_New_Person.Birthday>
+        <InArgument x:TypeArguments="s:Nullable(s:DateTime)">
+          <CSharpValue x:TypeArguments="s:Nullable(s:DateTime)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">DateTime.Parse(BirthdayString)</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.Birthday>
+      <df:Create_New_Person.CityStateZip>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">CityStateZip</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.CityStateZip>
+      <df:Create_New_Person.Email>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">Email</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.Email>
+      <df:Create_New_Person.Mobile>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Mobile</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.Mobile>
+      <df:Create_New_Person.PathToPhoto>
+        <InArgument x:TypeArguments="x:String" />
+      </df:Create_New_Person.PathToPhoto>
+      <df:Create_New_Person.Person>
+        <OutArgument x:TypeArguments="d:FPGPerson">
+          <CSharpReference x:TypeArguments="d:FPGPerson" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">Person</CSharpReference>
+        </OutArgument>
+      </df:Create_New_Person.Person>
+      <df:Create_New_Person.Race>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">Race</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.Race>
+      <df:Create_New_Person.Street>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">Street</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.Street>
+      <df:Create_New_Person.Telephone>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">Telephone</CSharpValue>
+        </InArgument>
+      </df:Create_New_Person.Telephone>
+    </df:Create_New_Person>
+  </Sequence>
+</Activity>
