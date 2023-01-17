@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Scrape_Person" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:Demo_DataService_Entities;assembly=DataService.Demo_DataService_Entities" xmlns:df="clr-namespace:Demo_DataService_Entities.Flows;assembly=Demo.DataService.Entities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Scrape_Person" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:Demo_DataService_Entities;assembly=DataService.Demo_DataService_Entities" xmlns:df="clr-namespace:Demo_DataService_Entities.Flows;assembly=Demo.DataService.Entities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Person" Type="OutArgument(d:FPGPerson)" />
     <x:Property Name="Env" Type="InArgument(x:String)" />
@@ -7,7 +7,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:Scrape_Person.Env>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1406,2931.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1406,3419.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -98,7 +98,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Scrape_Person" sap:VirtualizedContainerService.HintSize="602.6666666666666,2866.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Scrape_Person" sap:VirtualizedContainerService.HintSize="602.6666666666666,3354.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CityStateZip" />
       <Variable x:TypeArguments="x:String" Name="Email" />
@@ -114,7 +114,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: Random Person/Name Generator | User Identity, Account and Profile Generator" sap:VirtualizedContainerService.HintSize="540.6666666666666,2150" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V2">
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: Random Person/Name Generator | User Identity, Account and Profile Generator" sap:VirtualizedContainerService.HintSize="540.6666666666666,2638" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ad7eaca9-e394-428e-b007-1dd85622e8c0" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -241,9 +241,31 @@
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.CloseMode>
+        <InArgument x:TypeArguments="uix:NAppCloseMode">
+          <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">UiPath.UIAutomationNext.Enums.NAppCloseMode.Never</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.CloseMode>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement" />
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
+      <uix:NApplicationCard.OutUiElement>
+        <OutArgument x:TypeArguments="ui:UiElement" />
+      </uix:NApplicationCard.OutUiElement>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="3b9ee752e87877157f7124260c3213da.jpg" Selector="&lt;html title='Random Person/Name Generator | User Identity, Account and Profile Generator' app='chrome.exe' /&gt;" Title="Random Person/Name Generator | User Identity, Account and Profile Generator" Url="https://www.fakepersongenerator.com/" />
       </uix:NApplicationCard.TargetApp>
+      <uix:NApplicationCard.Timeout>
+        <InArgument x:TypeArguments="x:Double" />
+      </uix:NApplicationCard.Timeout>
+      <uix:NApplicationCard.UserDataFolderPath>
+        <InArgument x:TypeArguments="x:String" />
+      </uix:NApplicationCard.UserDataFolderPath>
     </uix:NApplicationCard>
     <df:Create_New_Person DisplayName="Create New Person (Create_New_Person)" Env="Development" sap:VirtualizedContainerService.HintSize="540.6666666666666,566" sap2010:WorkflowViewState.IdRef="Create_New_Person_1">
       <df:Create_New_Person.Birthday>
