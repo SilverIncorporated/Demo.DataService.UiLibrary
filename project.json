@@ -3,16 +3,16 @@
   "description": "UiLibrary for Tquilla Data Service Testing",
   "main": "NewActivity.xaml",
   "dependencies": {
+    "Demo.DataService.Entities": "1.1.0",
     "UiPath.System.Activities": "22.10.4",
     "UiPath.Testing.Activities": "22.12.0-preview",
-    "UiPath.UIAutomation.Activities": "22.10.4",
-    "UiPath.WebAPI.Activities": "1.13.3"
+    "UiPath.UIAutomation.Activities": "22.10.4"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -35,12 +35,25 @@
     "outputType": "Library",
     "libraryOptions": {
       "includeOriginalXaml": false,
-      "privateWorkflows": []
+      "privateWorkflows": [
+        "Actions/Initialization/Open Site - Fake Person Generator.xaml",
+        "Actions/Person/Generate Person.xaml",
+        "Actions/Person/Scrape Person.xaml",
+        "Actions/Person/Click Generate.xaml"
+      ]
     },
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9d0d4522-bd5b-4965-ad77-6194231de6a8",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Flows\\TestCase_GeneratePerson.xaml"
+      }
+    ],
     "modernBehavior": true
   },
   "expressionLanguage": "CSharp",
